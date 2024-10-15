@@ -123,12 +123,18 @@ document
     const productName =
       document.getElementById("modal-product-name").textContent;
     const price = document.getElementById("modal-product-price").textContent;
+
+    const timestamp = Date.now(); // Obtém o timestamp atual em milissegundos
+    const numberAleatory = Math.floor(Math.random() * 1000); // Gera um número aleatório entre 0 e 999
+    const identification = timestamp + numberAleatory; // Combina o timestamp com o número aleatório
+
     const message = `Olá Gabriel, fiz o pagamento e estou enviando o comprovante do produto abaixo:
     
-    *Nome:* ${productName}
-    *Preço:* R$ ${price}
+*Nome:* ${productName}
+*Preço:* R$ ${price}
+*Código:* ${identification}
 
-    Estou aguardando os dados para o meu acesso.
+Estou aguardando os dados para o meu acesso.
     `;
     const numberWhatsApp = "31983272409";
     const whatsappUrl = `https://wa.me/55${numberWhatsApp}?text=${encodeURIComponent(
