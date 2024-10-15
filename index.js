@@ -30,6 +30,38 @@ const products = [
       "https://dandelions.co.jp/blog/wp/wp-content/uploads/2024/06/image-3.png",
     budge: "Anual",
   },
+  {
+    id: 4,
+    name: "Combo Expert",
+    price: 45.9,
+    description: "Aproveite tudo das melhores ferramentas desse mercado.",
+    image: "./assets/combo+total.jpg",
+    budge: "Anual",
+  },
+  {
+    id: 5,
+    name: "Combo Editor",
+    price: 34.9,
+    description: "Aproveite tudo das melhores ferramentas desse mercado.",
+    image: "./assets/combo+canva+capcut.jpg",
+    budge: "Anual",
+  },
+  {
+    id: 6,
+    name: "Combo Designer",
+    price: 32.9,
+    description: "Aproveite tudo das melhores ferramentas desse mercado.",
+    image: "./assets/combo+canva+chatgpt.jpg",
+    budge: "Anual",
+  },
+  {
+    id: 7,
+    name: "Combo VideoMaker",
+    price: 32.9,
+    description: "Aproveite tudo das melhores ferramentas desse mercado.",
+    image: "./assets/combo+chatgpt+capcut.jpg",
+    budge: "Anual",
+  },
 ];
 
 // Função para criar o HTML de um produto
