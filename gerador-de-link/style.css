@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --primary-color: #07021e;
+  --white: #fafafa;
+  --black: #181818;
+  --gray: #282727;
+}
+body {
+  font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+    Roboto, Arial, sans-serif;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+header {
+  max-width: 1140px;
+  height: 80px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 330px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 20px auto;
+  padding: 0 10px;
+  min-height: calc(100vh - 16vh);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.box-container {
+  width: 330px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+#box-input {
+  padding-top: 5px;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.box-title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 100%;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+#box-input input[type="text"] {
+  height: 40px;
+  padding: 5px;
+  outline: none;
+}
+
+#box-input textarea {
+  padding: 5px;
+  outline: none;
+  height: 200px;
+}
+
+.observation {
+  font-size: 12px;
+  padding: 5px;
+  color: #b1aeaece;
+}
+
+button {
+  height: 40px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+#copyArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+#copyArea .area {
+  height: 40px;
+  font-size: 12px;
+  line-height: 200%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: rgb(31, 30, 30);
+  padding: 5px;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: #cfced350;
+  font-family: monospace;
+}

@@ -9,6 +9,7 @@ const products = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJjW7pHbZAIeGR54U3K4OCy8B83Vg1204EUw&s",
     budge: "Vitalicio",
+    button: "Comprar",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const products = [
     image:
       "https://dcdn.mitiendanube.com/stores/002/385/428/products/2-db05415368daf7aa9d17146236794729-1024-1024.png",
     budge: "Anual",
+    button: "Comprar",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const products = [
     image:
       "https://dandelions.co.jp/blog/wp/wp-content/uploads/2024/06/image-3.png",
     budge: "Anual",
+    button: "Comprar",
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const products = [
     description: "Aproveite tudo das melhores ferramentas desse mercado.",
     image: "./assets/combo+total.jpg",
     budge: "Anual",
+    button: "Comprar",
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const products = [
     description: "Aproveite tudo das melhores ferramentas desse mercado.",
     image: "./assets/combo+canva+chatgpt.jpg",
     budge: "Anual",
+    button: "Comprar",
   },
   {
     id: 7,
@@ -61,6 +66,17 @@ const products = [
     description: "Aproveite tudo das melhores ferramentas desse mercado.",
     image: "./assets/combo+chatgpt+capcut.jpg",
     budge: "Anual",
+    button: "Comprar",
+  },
+  {
+    id: 8,
+    name: "Gerador de Link",
+    price: 0,
+    description: "Crie links personalizado para whastApp em poucos passos.",
+    image: "./assets/gerador-de-link.jpg",
+    budge: "Gratuito",
+    button: "Acessar",
+    href: "./gerador-de-link/index.html",
   },
 ];
 
@@ -74,10 +90,24 @@ function createProductHTML(product) {
                 <h2>${product.name}</h2>
                 <p class="description">${product.description}</p>
                 <p>R$ ${product.price.toFixed(2).replace(`.`, `,`)}</p>
-                <button onclick="openModal(${product.id})">Comprar</button>
+                <button onclick="handleButtonClick(${product.id})">${
+    product.button
+  }</button>
             </div>
         </div>
     `;
+}
+
+// Função para lidar com o clique no botão
+function handleButtonClick(productId) {
+  const product = products.find((p) => p.id === productId);
+
+  // Verifica se o produto possui um link href
+  if (product.href) {
+    window.location.href = product.href; // Abre o link
+  } else {
+    openModal(productId); // Abre o modal se não houver href
+  }
 }
 
 // Inserir produtos na página
@@ -115,8 +145,8 @@ document.getElementById("pay-button").addEventListener("click", function () {
   qrcodeContainer.innerHTML = ""; // Limpar QR code anterior
   new QRCode(qrcodeContainer, {
     text: currentPixCode,
-    width: 128,
-    height: 128,
+    width: 200,
+    height: 200,
   });
 
   modal.style.display = "none"; // Fechar o modal principal

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="gerador.js" defer></script>
+    <title>Gerador de Link - Toolbox Digital</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        Gerador de Links Para WhatsApp <span>By Toolbox Digital</span>
+      </div>
+    </header>
+    <div class="container">
+      <div class="box-container">
+        <div id="box-input" class="">
+          <h2 class="box-title">
+            Informe os dados para gerarmos o seu link personalizado.
+          </h2>
+          <input
+            type="text"
+            id="telefone"
+            maxlength="20"
+            placeholder="(11) 98765-4321"
+            oninput="mascararTelefone(this)"
+            required
+          />
+
+          <textarea
+            id="mensagem"
+            placeholder="Informe aqui sua mensagem (opcional)"
+            rows="6"
+          ></textarea>
+          <p class="observation">
+            Observação: Informe o texto da forma que você quer que apareça na
+            mensagem. caso queira alguma parte em negrito use assim *E o seu
+            texto entre os asteriscos*
+          </p>
+          <button id="gerarLink">Gerar Link</button>
+        </div>
+
+        <div id="copyArea" class="hidden">
+          <p class="area" id="textArea"></p>
+          <button id="copyLink">Copiar Link</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
