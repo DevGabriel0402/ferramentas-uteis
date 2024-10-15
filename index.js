@@ -35,13 +35,15 @@ const products = [
 // Função para criar o HTML de um produto
 function createProductHTML(product) {
   return `
-        <div class="product">
-            <div class="budge">${product.budge}</div>
-            <img src="${product.image}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <p class="description">${product.description}</p>
-            <p>R$ ${product.price.toFixed(2)}</p>
-            <button onclick="openModal(${product.id})">Comprar</button>
+        <div class="border-animate">
+            <div class="product">
+                <div class="budge">${product.budge}</div>
+                <img src="${product.image}" alt="${product.name}">
+                <h2>${product.name}</h2>
+                <p class="description">${product.description}</p>
+                <p>R$ ${product.price.toFixed(2).replace(`.`, `,`)}</p>
+                <button onclick="openModal(${product.id})">Comprar</button>
+            </div>
         </div>
     `;
 }

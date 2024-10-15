@@ -1,0 +1,23 @@
+@media (max-width: 400px) {
+  .product img {
+    height: 280px;
+  }
+
+  .budge {
+    font-size: 18px;
+  }
+
+  .product h2 {
+    font-size: 22px;
+  }
+
+  .product .description {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}

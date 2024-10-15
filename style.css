@@ -5,16 +5,23 @@
   font-family: sans-serif;
 }
 
+:root {
+  --primary-color: #07021e;
+  --white: #fafafa;
+  --black: #181818;
+  --gray: #282727;
+}
+
 body {
   font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
     Roboto, Arial, sans-serif;
-  background-color: #ebebeb;
+  background-color: var(--black);
   margin: 0;
   padding: 0;
 }
 
 .header {
-  background-color: #fff159;
+  background-color: var(--black);
   padding: 10px 0;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
 }
@@ -24,7 +31,7 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 }
 
 .logo {
@@ -32,7 +39,7 @@ body {
   line-height: 100%;
   font-size: 24px;
   font-weight: 400;
-  color: #333;
+  color: var(--white);
 }
 
 .logo span {
@@ -59,14 +66,25 @@ body {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease-in-out;
 }
+.border-animate {
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.border-animate:hover {
+  background-color: gray;
+  padding: 4px;
+}
 
 .budge {
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 10px;
   padding: 5px 8px;
   border-radius: 10px;
-  background-color: #3483fa50;
+  background-color: var(--primary-color);
   backdrop-filter: blur(5px);
   font-size: 12px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 6px 24px 0px,
@@ -91,7 +109,7 @@ body {
 }
 
 .product h2 {
-  font-size: 14px;
+  font-size: 18px;
   margin: 8px 0;
   color: #333;
 }
@@ -114,7 +132,7 @@ body {
 }
 
 button {
-  background-color: #3483fa;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -125,7 +143,7 @@ button {
 }
 
 button:hover {
-  background-color: #2968c8;
+  background-color: var(--gray);
 }
 
 .modal {
@@ -208,4 +226,5 @@ button:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  gap: 30px;
 }
