@@ -110,6 +110,7 @@ body {
 
 .product h2 {
   font-size: 18px;
+  height: 40px;
   margin: 8px 0;
   color: #333;
 }
