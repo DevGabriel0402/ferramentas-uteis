@@ -130,7 +130,10 @@ document
 
     Estou aguardando os dados para o meu acesso.
     `;
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    const numberWhatsApp = "31983272409";
+    const whatsappUrl = `https://wa.me/55${numberWhatsApp}?text=${encodeURIComponent(
+      message
+    )}`;
 
     window.open(whatsappUrl, "_blank");
   });
