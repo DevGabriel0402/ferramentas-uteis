@@ -49,6 +49,7 @@ const products = [
     description: "Aproveite tudo das melhores ferramentas desse mercado.",
     image: "./assets/combo+canva+capcut.jpg",
     budge: "Anual",
+    button: "Comprar",
   },
   {
     id: 6,
