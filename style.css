@@ -184,7 +184,12 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
 }
-
+#modal-product-description {
+  width: 100%;
+  padding-inline: 10%;
+  font-size: 14px;
+  padding-block: 10px;
+}
 .modal-product-image {
   width: 150px;
   height: 150px;

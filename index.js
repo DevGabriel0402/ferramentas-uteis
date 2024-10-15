@@ -129,6 +129,8 @@ let currentPixCode = "eusouonumerodopix"; // Código PIX fixo
 function openModal(productId) {
   const product = products.find((p) => p.id === productId);
   document.getElementById("modal-product-name").textContent = product.name;
+  document.getElementById("modal-product-description").textContent =
+    product.description;
   document.getElementById("modal-product-price").textContent =
     product.price.toFixed(2);
   document.getElementById("modal-product-image").src = product.image;
