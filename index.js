@@ -85,7 +85,7 @@ const products = [
 function createProductHTML(product) {
   return `
         <div class="border-animate">
-            <div class="product">
+            <div class="product skeleton">
                 <div class="budge ${product.budge}">${product.budge}</div>
                 <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
@@ -207,4 +207,8 @@ Estou aguardando os dados para o meu acesso.
     )}`;
 
     window.open(whatsappUrl, "_blank");
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
   });

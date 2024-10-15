@@ -27,7 +27,7 @@ document.getElementById(`gerarLink`).addEventListener(`click`, () => {
     textArea.innerText = whatsappUrl;
   }
 });
-// Função para copiar o código PIX
+// Funcao para copiar
 document.getElementById("copyLink").addEventListener("click", function () {
   const numeroWhatsApp = document
     .getElementById(`telefone`)
@@ -41,4 +41,8 @@ document.getElementById("copyLink").addEventListener("click", function () {
   navigator.clipboard.writeText(whatsappUrl).then(() => {
     alert("Link copiado para a área de transferência!");
   });
+
+  setTimeout(() => {
+    window.location.reload();
+  }, 3000);
 });
