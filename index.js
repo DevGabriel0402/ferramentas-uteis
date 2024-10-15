@@ -132,7 +132,7 @@ document
     
 *Nome:* ${productName}
 *Preço:* R$ ${price}
-*Código:* ${identification}
+*Código de Identificação:* ${identification}
 
 Estou aguardando os dados para o meu acesso.
     `;
