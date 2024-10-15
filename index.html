@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Estilo Mercado Livre</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">Ferramentas Úteis</div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div id="products" class="products">
+        <!-- Os produtos serão inseridos aqui pelo JavaScript -->
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img
+          src=""
+          alt=""
+          id="modal-product-image"
+          class="modal-product-image"
+        />
+        <div class="content-info-modal">
+          <div class="text-content-modal">
+            <h2 id="modal-product-name"></h2>
+            <p class="price-modal">R$ <span id="modal-product-price"></span></p>
+          </div>
+          <button id="pay-button">Fazer Pagamento</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="payment-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-payment-modal">&times;</span>
+        <p class="instructions-modal">
+          Instruções:
+          <br />
+          1 - Copie o código PIX clicando em "Copiar código PIX" e confirme a
+          cópia.
+          <br />
+          2 - Abra seu aplicativo de banco e cole o código PIX no campo "Copia e
+          Cola"
+          <br />
+          3 - Após realizar o pagamento, clique em "Enviar Comprovante para
+          WhatsApp", revise a mensagem e envie-a.
+        </p>
+        <div id="qrcode"></div>
+        <div class="qr-buttons">
+          <button id="copy-pix">Copiar código PIX</button>
+          <button id="whatsapp-button">Enviar Comprovante para WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
