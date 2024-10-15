@@ -84,7 +84,6 @@ body {
   right: 10px;
   padding: 5px 8px;
   border-radius: 10px;
-  background-color: var(--primary-color);
   backdrop-filter: blur(5px);
   font-size: 12px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 6px 24px 0px,
@@ -92,6 +91,15 @@ body {
   font-weight: 600;
   color: #fafafa;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Gratuito {
+  background-color: #098725;
+}
+.Anual,
+.Vitalicio,
+.Mensal {
+  background-color: var(--primary-color);
 }
 
 .product:hover {

@@ -85,7 +85,7 @@ function createProductHTML(product) {
   return `
         <div class="border-animate">
             <div class="product">
-                <div class="budge">${product.budge}</div>
+                <div class="budge ${product.budge}">${product.budge}</div>
                 <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
                 <p class="description">${product.description}</p>
