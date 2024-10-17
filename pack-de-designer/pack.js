@@ -126,9 +126,9 @@ const validPassword = '@Brasil2024';
 function checkAuth() {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
     if (isAuthenticated === 'true') {
-        document.getElementById('login-container').style.display = 'none'; // Esconde a tela de login
-        document.getElementById('container').style.display = 'block'; // Mostra o conteúdo
-        document.getElementById('header').style.display = 'block'; // Mostra o conteúdo
+        document.getElementById('login-container').classList.add(`hidden`);
+        document.getElementById('container').classList.remove(`hidden`) // Mostra o conteúdo
+        document.getElementById('header').classList.remove(`hidden`) // Mostra o conteúdo
 
     }
 }
@@ -143,9 +143,9 @@ document.getElementById('login-button').addEventListener('click', function () {
     if (username === validUsername && password === validPassword) {
         localStorage.setItem('isAuthenticated', 'true'); // Salva a autenticação no localStorage
         setTimeout(() => {
-            document.getElementById('login-container').style.display = 'none'; // Esconde a tela de login
-            document.getElementById('container').style.display = 'block'; // Mostra o conteúdo
-            document.getElementById('header').style.display = 'block'; // Mostra o conteúdo
+            document.getElementById('login-container').classList.add(`hidden`);
+            document.getElementById('container').classList.remove(`hidden`) // Mostra o conteúdo
+            document.getElementById('header').classList.remove(`hidden`) // Mostra o conteúdo
         }, 3000
         )
     } else {
