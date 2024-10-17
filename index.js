@@ -125,7 +125,7 @@ const products = [
   {
     id: 12,
     name: "Pack para Designer PRO",
-    price: 0,
+    price: 9.9,
     description:
       "Mais de 1TB de arquivos incluindo, PSD`s, textura, vfx, mockups e muito mais.",
     image:
