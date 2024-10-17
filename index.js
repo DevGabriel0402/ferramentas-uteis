@@ -95,7 +95,7 @@ const products = [
     image:
       "https://static-media.hotmart.com/CQ4chJS9uQPfckKKE3YINruaEx8=/600x600/smart/filters:format(jpg):background_color(white)/hotmart/product_pictures/36c6c656-0214-4875-b609-ed5d19585a00/PROFILEFILTROS.png",
     budge: "Anual",
-    button: "Acessar",
+    button: "Comprar",
     pix: `00020126580014BR.GOV.BCB.PIX0136c3cbea24-7b44-4e26-b0dd-e406b19615e7520400005303986540512.905802BR5925Gabriel Lucas Aniceto Vie6009SAO PAULO62140510U59Bxjnt7t6304F14D`,
   },
   {
@@ -107,7 +107,7 @@ const products = [
     image:
       "https://hotmart.s3.amazonaws.com/product_pictures/016e3502-f683-429d-845f-ad1d702fbdfc/JPGLogodoCurso.jpg",
     budge: "Anual",
-    button: "Acessar",
+    button: "Comprar",
     pix: `00020126580014BR.GOV.BCB.PIX0136c3cbea24-7b44-4e26-b0dd-e406b19615e7520400005303986540512.905802BR5925Gabriel Lucas Aniceto Vie6009SAO PAULO62140510U59Bxjnt7t6304F14D`,
   },
   {
