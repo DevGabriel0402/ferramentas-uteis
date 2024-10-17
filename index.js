@@ -122,6 +122,18 @@ const products = [
     button: "Acessar",
     href: `https://www.canva.com/brand/join?token=X4CAsfBfLb-aIUbV1o_34Q&brandingVariant=edu&invitationDestinationType=group`,
   },
+  {
+    id: 12,
+    name: "Pack para Designer PRO",
+    price: 0,
+    description:
+      "Mais de 1TB de arquivos incluindo, PSD`s, textura, vfx, mockups e muito mais.",
+    image:
+      "https://packdodesign.com/wp-content/uploads/2021/04/packdodesignbox.png",
+    budge: "Anual",
+    button: "Em breve",
+    href: `./pack-de-designer/index.html`,
+  },
 ];
 
 // Função para criar o HTML de um produto
@@ -134,9 +146,8 @@ function createProductHTML(product) {
                 <h2>${product.name}</h2>
                 <p class="description">${product.description}</p>
                 <p>R$ ${product.price.toFixed(2).replace(`.`, `,`)}</p>
-                <button onclick="handleButtonClick(${product.id})">${
-    product.button
-  }</button>
+                <button onclick="handleButtonClick(${product.id})">${product.button
+    }</button>
             </div>
         </div>
     `;

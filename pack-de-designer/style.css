@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --primary-color: #07021e;
+    --white: #fafafa;
+    --black: #181818;
+    --gray: #282727;
+  }
+  
+  body {
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+      Roboto, Arial, sans-serif;
+    background-color: var(--black);
+    padding: 10px;
+
+  }
+  
+  .header {
+    display: none;
+    background-color: var(--black);
+    padding: 10px 0;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    line-height: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  
+  #login-container {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login{
+      display: flex;
+      width: 280px;
+      gap: 5px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--black);
+    
+
+    h2{
+      color: var(--white);
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+    input{
+      outline: none;
+      height: 30px;
+      width: 200px;
+      padding-left: 5px;
+    }
+
+    .buttons-log{
+      display: flex;
+      width: 200px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    button{
+      background-color: var(--black);
+      border: 2px solid var(--white);
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+     svg path{
+        fill: var(--white);
+      }
+    }
+    #adesao{
+      display: none;
+      width: 200px;
+      font-size: 12px;
+      color: var(--white);
+    }
+  }
+}
+  
+  .container {
+    display: none;
+   max-width: 1140px;
+    margin: 20px auto;
+    padding: 0 10px;
+    min-height: calc(100vh - 16vh);
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  
+  .product {
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  .border-animate {
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .border-animate:hover {
+    background-color: gray;
+    padding: 4px;
+  }
+
+  
+  .product:hover {
+    box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .product h1 {
+    width: 100%;
+    height: 218px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.5) url("https://st5.depositphotos.com/68854060/74393/i/450/depositphotos_743931192-stock-photo-rich-dark-gradient-featuring-deep.jpg") no-repeat center;
+    background-size: cover;
+    border-radius: 4px;
+    backdrop-filter: blur(10px); /* Ajuste o valor do blur */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+    color: rgba(251, 251, 251, 0.948);
+    text-shadow: rgba(0, 0, 0, 0.55) 0px 6px 24px 0px;
+}
+  
+  .product h2 {
+    font-size: 18px;
+    height: 40px;
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  .product .description {
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .product p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 8px 0;
+    color: #333;
+  }
+
+
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: var(--gray);
+  }
+  
+  
+  
+
+  footer {
+    width: 100%;
+    height: 24px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
