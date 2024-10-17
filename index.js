@@ -130,8 +130,8 @@ const products = [
       "Mais de 1TB de arquivos incluindo, PSD`s, textura, vfx, mockups e muito mais.",
     image:
       "https://packdodesign.com/wp-content/uploads/2021/04/packdodesignbox.png",
-    budge: "Anual",
-    button: "Em breve",
+    budge: "Vitalicio",
+    button: "Acessar",
     href: `./pack-de-designer/index.html`,
   },
 ];
