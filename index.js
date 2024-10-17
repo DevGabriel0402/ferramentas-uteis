@@ -79,6 +79,28 @@ const products = [
     button: "Acessar",
     href: "./gerador-de-link/index.html",
   },
+  {
+    id: 9,
+    name: "Criacão de Filtro",
+    price: 12.9,
+    description:
+      "Com esse mini treinamento você já vai conseguir criar seus próprios filtros e até mesmo vendê-los",
+    image:
+      "https://static-media.hotmart.com/CQ4chJS9uQPfckKKE3YINruaEx8=/600x600/smart/filters:format(jpg):background_color(white)/hotmart/product_pictures/36c6c656-0214-4875-b609-ed5d19585a00/PROFILEFILTROS.png",
+    budge: "Anual",
+    button: "Acessar",
+  },
+  {
+    id: 10,
+    name: "Designer 3X",
+    price: 12.9,
+    description:
+      "Cursod e Web Design voltado para criação e manipulação de imagens e implemntação no wordpress com elementor pro",
+    image:
+      "https://hotmart.s3.amazonaws.com/product_pictures/016e3502-f683-429d-845f-ad1d702fbdfc/JPGLogodoCurso.jpg",
+    budge: "Anual",
+    button: "Acessar",
+  },
 ];
 
 // Função para criar o HTML de um produto
