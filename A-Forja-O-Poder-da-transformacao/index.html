@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>A Forja - O Poder da transformação</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <button class="btn-play" id="playButton">Assistir Agora</button>
+        <button class="btn-doar hidden" id="doarButton">Fazer uma doação</button>
+       <div id="videoFrame" class="hidden">
+    
+        <iframe 
+            id="video" 
+            width="920" 
+            height="500" 
+            style="max-width:100%;max-height:100%"
+            src="" 
+            title=""
+            frameborder="0" 
+            allow="autoplay; accelerometer; encrypted-media; picture-in-picture" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+
+        <p id="videoDescription" class="hidden"><span>Observação:</span> o video se inicializa em 360P (pior qualidade), para colocar em Full HD (melhor qualidade) basta modificar para 1080P.</p>
+        </div>
+    </div>
+</body>
+</html>

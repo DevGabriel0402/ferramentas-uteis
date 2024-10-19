@@ -134,6 +134,18 @@ const products = [
     button: "Acessar",
     href: `./pack-de-designer/index.html`,
   },
+  {
+    id: 13,
+    name: "A Forja - O poder da transformação",
+    price: 0,
+    description:
+      "Assista agora o filme que tem emocianado e transformado muitas pessoas.",
+    image:
+      "https://br.web.img2.acsta.net/img/67/e4/67e451cd6d1ceb7a0d2d5cdd4ef50317.jpg",
+    budge: "Gratuito",
+    button: "Acessar",
+    href: `./A-Forja-O-Poder-da-transformacao/index.html`,
+  },
 ];
 
 // Função para criar o HTML de um produto
