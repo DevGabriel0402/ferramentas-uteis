@@ -136,7 +136,7 @@ const products = [
   },
   {
     id: 13,
-    name: "A Forja - O poder da transformação",
+    name: "A Forja - O poder da ...",
     price: 0,
     description:
       "Assista agora o filme que tem emocianado e transformado muitas pessoas.",
