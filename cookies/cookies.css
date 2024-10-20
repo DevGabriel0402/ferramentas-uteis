@@ -50,6 +50,6 @@
   @media(max-width: 400px){
     .cookie-popup {
       width: 100%;
-      max-width: 200px;
+      max-width: 300px;
   }
 }
