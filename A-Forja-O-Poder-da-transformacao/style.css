@@ -85,12 +85,11 @@ button{
 .privacy{
     position: absolute;
     z-index: 99;
-    width: 150px;
+    width: 100px;
     height: 60px;
-
     max-width: 100%;
     top: 20px;
-    left: 20px;
+    left: 70px;
     background-color: transparent;
 }
 
