@@ -26,8 +26,13 @@ document.getElementById(`playButton`).addEventListener(`click`, () => {
         playIcon.classList.add(`hidden`)
         thumb.classList.add(`hidden`)
 
-    })
 
+
+    })
+    setTimeout(() => {
+        document.getElementById(`privacy`).style.left = `70px`;
+
+    }, 15000)
 })
 
 
