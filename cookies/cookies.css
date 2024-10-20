@@ -1,0 +1,55 @@
+:root {
+  --primary-color: #07021e;
+  --white: #fafafa;
+  --black: #181818;
+  --gray: #282727;
+}
+
+.cookie-popup {
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+    position: fixed;
+    margin: 0 auto;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #fafafa99;
+    backdrop-filter: blur(20px);
+    color: var(--black);
+    border: 1px solid #18181820;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+  }
+
+  
+  .cookie-popup button {
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cookie-popup button:hover {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
+
+  }
+
+
+  @media(max-width: 400px){
+    .cookie-popup {
+      width: 100%;
+      max-width: 200px;
+  }
+}

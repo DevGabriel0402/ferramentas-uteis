@@ -27,10 +27,12 @@ body {
 
 .header-content {
   max-width: 1140px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-inline: 20px;
 }
 
 .logo {
@@ -43,6 +45,20 @@ body {
 
 .logo span {
   font-weight: 700;
+}
+
+.filter {
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--black);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+  position: relative;
+  border: 1px solid var(--white);
+  outline: none;
 }
 
 .container {
@@ -94,10 +110,21 @@ body {
 }
 
 .Gratuito,
-.Teste {
+.Teste,
+.Pack,
+.Filme {
   background-color: #098725;
 }
-.Anual,
+.Anual{
+  background-color: #68e7f8;
+  color: var(--black);
+}
+
+.Curso{
+background-color: var(--white);
+border: 1px solid var(--black);
+color: var(--black);
+}
 .Vitalicio,
 .Mensal {
   background-color: var(--primary-color);

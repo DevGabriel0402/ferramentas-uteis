@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Toolbox Digital é o seu destino para descobrir e explorar as melhores ferramentas digitais que potencializam produtividade e criatividade. Encontre análises, tutoriais e dicas para otimizar seu trabalho e transformar sua experiência digital!"
+      content="Toolbox Digital é o seu destino para descobrir e explorar as melhores ferramentas digitais que potencializam produtividade e criatividade."
     />
     <title>ToolBox Digital</title>
     <link
@@ -15,37 +15,41 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="cookies/cookies.css">
     <script src="index.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="cookies/cookies.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="header-content">
         <div class="logo">Digital <span>ToolBox</span></div>
+        <select id="filter" class="filter">
+          <option value="all">Todos</option>
+          <option value="Gratuito">Gratuito</option>
+          <option value="Teste">Teste</option>
+          <option value="Anual">Anual</option>
+          <option value="Pack">Pack</option>
+          <option value="Filme">Filme</option>
+          <option value="Curso">Curso</option>
+        </select>
       </div>
     </header>
 
     <div class="container">
       <div id="products" class="products">
-        <!-- Os produtos serão inseridos aqui pelo JavaScript -->
+        <!-- Produtos serão inseridos aqui pelo JavaScript -->
       </div>
     </div>
 
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img
-          src=""
-          alt=""
-          id="modal-product-image"
-          class="modal-product-image"
-        />
+        <img id="modal-product-image" class="modal-product-image" />
         <div class="content-info-modal">
-          <div class="text-content-modal">
-            <h2 id="modal-product-name"></h2>
-            <p id="modal-product-description"></p>
-            <p class="price-modal">R$ <span id="modal-product-price"></span></p>
-          </div>
+          <h2 id="modal-product-name"></h2>
+          <p id="modal-product-description"></p>
+          <p class="price-modal">R$ <span id="modal-product-price"></span></p>
           <button id="pay-button">Fazer Pagamento</button>
         </div>
       </div>
@@ -56,23 +60,27 @@
         <span class="close-payment-modal">&times;</span>
         <p class="instructions-modal">
           Instruções:
-          <br />
-          1 - Copie o código PIX clicando em "Copiar código PIX" e confirme a
-          cópia.
-          <br />
-          2 - Abra seu aplicativo de banco e cole o código PIX no campo "Copia e
-          Cola" e informe o valor do seu produto.
-          <br />
-          3 - Após realizar o pagamento, clique em "Enviar Comprovante para
-          WhatsApp", revise a mensagem e envie-a.
+          <br />1 - Copie o código PIX clicando em "Copiar código PIX".<br />
+          2 - Abra seu aplicativo de banco e cole o código no campo "Copia e Cola".<br />
+          3 - Após pagar, clique em "Enviar Comprovante para WhatsApp".
         </p>
         <div id="qrcode"></div>
         <div class="qr-buttons">
           <button id="copy-pix">Copiar código PIX</button>
-          <button id="whatsapp-button">Enviar Comprovante para WhatsApp</button>
+          <button id="whatsapp-button">Enviar Comprovante</button>
         </div>
       </div>
     </div>
+
+
     <footer>Toolbox Digital &copy; Todos os direitos reservados.</footer>
+
+    <div class="cookie-popup" id="cookiePopup">
+      <p>
+        Este site utiliza cookies para garantir que você tenha a melhor experiência.
+      </p>
+      <button id="acceptCookies">Aceitar</button>
+    </div>
+    
   </body>
 </html>

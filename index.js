@@ -8,7 +8,7 @@ const products = [
       "Crie designs incríveis com recursos premium e ferramentas avançadas de edição.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJjW7pHbZAIeGR54U3K4OCy8B83Vg1204EUw&s",
-    budge: "Vitalicio",
+    budge: "Anual",
     button: "Comprar",
     pix: `00020126580014BR.GOV.BCB.PIX0136c3cbea24-7b44-4e26-b0dd-e406b19615e7520400005303986540515.905802BR5925Gabriel Lucas Aniceto Vie6009SAO PAULO62140510o7hMabg1e86304AC98`,
   },
@@ -94,7 +94,7 @@ const products = [
       "Com esse mini treinamento você já vai conseguir criar seus próprios filtros e até mesmo vendê-los",
     image:
       "https://static-media.hotmart.com/CQ4chJS9uQPfckKKE3YINruaEx8=/600x600/smart/filters:format(jpg):background_color(white)/hotmart/product_pictures/36c6c656-0214-4875-b609-ed5d19585a00/PROFILEFILTROS.png",
-    budge: "Anual",
+    budge: "Curso",
     button: "Comprar",
     pix: `00020126580014BR.GOV.BCB.PIX0136c3cbea24-7b44-4e26-b0dd-e406b19615e7520400005303986540512.905802BR5925Gabriel Lucas Aniceto Vie6009SAO PAULO62140510U59Bxjnt7t6304F14D`,
   },
@@ -103,10 +103,10 @@ const products = [
     name: "Designer 3X",
     price: 12.9,
     description:
-      "Cursod e Web Design voltado para criação e manipulação de imagens e implemntação no wordpress com elementor pro",
+      "Curso e Web Design voltado para criação e manipulação de imagens e implemntação no wordpress com elementor pro",
     image:
       "https://hotmart.s3.amazonaws.com/product_pictures/016e3502-f683-429d-845f-ad1d702fbdfc/JPGLogodoCurso.jpg",
-    budge: "Anual",
+    budge: "Curso",
     button: "Comprar",
     pix: `00020126580014BR.GOV.BCB.PIX0136c3cbea24-7b44-4e26-b0dd-e406b19615e7520400005303986540512.905802BR5925Gabriel Lucas Aniceto Vie6009SAO PAULO62140510U59Bxjnt7t6304F14D`,
   },
@@ -130,7 +130,7 @@ const products = [
       "Mais de 1TB de arquivos incluindo, PSD`s, textura, vfx, mockups e muito mais.",
     image:
       "https://packdodesign.com/wp-content/uploads/2021/04/packdodesignbox.png",
-    budge: "Vitalicio",
+    budge: "Pack",
     button: "Acessar",
     href: `./pack-de-designer/index.html`,
   },
@@ -142,143 +142,141 @@ const products = [
       "Assista agora o filme que tem emocianado e transformado muitas pessoas.",
     image:
       "https://br.web.img2.acsta.net/img/67/e4/67e451cd6d1ceb7a0d2d5cdd4ef50317.jpg",
-    budge: "Gratuito",
+    budge: "Filme",
     button: "Acessar",
     href: `./A-Forja-O-Poder-da-transformacao/index.html`,
   },
+  {
+    id: 14,
+    name: "Pack para Designer",
+    price: 0,
+    description:
+      "Acesse o PACK GRATUÍTO para desigenr.",
+    image:
+      "https://nathaliaribeiro.com.br/wp-content/uploads/2020/11/anuncio-pack-psd.png",
+    budge: "Pack",
+    button: "Acessar",
+    href: `./pack-gratuito-de-designer`,
+  },
 ];
+
+const filterSelect = document.getElementById("filter");
+const productsContainer = document.getElementById("products");
 
 // Função para criar o HTML de um produto
 function createProductHTML(product) {
   return `
-        <div class="border-animate">
-            <div class="product skeleton">
-                <div class="budge ${product.budge}">${product.budge}</div>
-                <img src="${product.image}" alt="${product.name}">
-                <h2>${product.name}</h2>
-                <p class="description">${product.description}</p>
-                <p>R$ ${product.price.toFixed(2).replace(`.`, `,`)}</p>
-                <button onclick="handleButtonClick(${product.id})">${product.button
-    }</button>
-            </div>
-        </div>
-    `;
+    <div class="border-animate">
+      <div class="product">
+        <div class="budge ${product.budge}">${product.budge}</div>
+        <img src="${product.image}" alt="${product.name}" />
+        <h2>${product.name}</h2>
+        <p class="description">${product.description}</p>
+        <p>R$ ${product.price.toFixed(2).replace('.', ',')}</p>
+        <button onclick="handleButtonClick(${product.id})">${product.button}</button>
+      </div>
+    </div>`;
 }
 
-// Função para lidar com o clique no botão
-function handleButtonClick(productId) {
-  const product = products.find((p) => p.id === productId);
-
-  // Verifica se o produto possui um link href
-  if (product.href) {
-    // window.location.href = product.href; //abre o link
-    window.open(product.href, "_blank"); //abre o link
-  } else {
-    openModal(productId); // Abre o modal se não houver href
-  }
+// Função para renderizar produtos com base no filtro
+function renderProducts(filteredProducts) {
+  productsContainer.innerHTML = "";
+  filteredProducts.forEach((product) => {
+    productsContainer.innerHTML += createProductHTML(product);
+  });
 }
 
-// Inserir produtos na página
-const productsContainer = document.getElementById("products");
-products.forEach((product) => {
-  productsContainer.innerHTML += createProductHTML(product);
+// Evento de mudança no filtro
+filterSelect.addEventListener("change", (event) => {
+  const selectedCategory = event.target.value;
+  const filteredProducts = selectedCategory === "all"
+    ? products
+    : products.filter((product) => product.budge === selectedCategory);
+  renderProducts(filteredProducts);
 });
 
-// Funções para o modal
-// Funções para o modal
+// Renderiza todos os produtos ao carregar a página
+renderProducts(products);
+
+// Modais e funcionalidade de pagamento
 const modal = document.getElementById("modal");
 const paymentModal = document.getElementById("payment-modal");
-const span = document.getElementsByClassName("close")[0];
-const closePaymentModal = document.getElementsByClassName(
-  "close-payment-modal"
-)[0];
+const span = document.querySelector(".close");
+const closePaymentModal = document.querySelector(".close-payment-modal");
 let currentPixCode = "";
-let currentProduct = null;
 
+// Função para abrir o modal de produto
 function openModal(productId) {
-  currentProduct = products.find((p) => p.id === productId);
-  document.getElementById("modal-product-name").textContent =
-    currentProduct.name;
-  document.getElementById("modal-product-description").textContent =
-    currentProduct.description;
-  document.getElementById("modal-product-price").textContent =
-    currentProduct.price.toFixed(2);
-  document.getElementById("modal-product-image").src = currentProduct.image;
+  const product = products.find((p) => p.id === productId);
+  document.getElementById("modal-product-name").textContent = product.name;
+  document.getElementById("modal-product-description").textContent = product.description;
+  document.getElementById("modal-product-price").textContent = product.price.toFixed(2);
+  document.getElementById("modal-product-image").src = product.image;
 
-  // Armazenar o código PIX do produto atual
-  currentPixCode = currentProduct.pix;
-
+  currentPixCode = product.pix; // Armazena o código PIX do produto
   modal.style.display = "block";
 }
 
-// Evento para abrir o modal de pagamento
-document.getElementById("pay-button").addEventListener("click", function () {
-  // Gerar QR Code
+// Função para abrir a janela de pagamento e gerar o QR Code
+document.getElementById("pay-button").addEventListener("click", () => {
   const qrcodeContainer = document.getElementById("qrcode");
-  qrcodeContainer.innerHTML = ""; // Limpar QR code anterior
+  qrcodeContainer.innerHTML = ""; // Limpa o QR Code anterior
   new QRCode(qrcodeContainer, {
     text: currentPixCode,
     width: 200,
     height: 200,
   });
 
-  modal.style.display = "none"; // Fechar o modal principal
-  paymentModal.style.display = "block"; // Abrir o modal de pagamento
+  modal.style.display = "none"; // Fecha o modal de produto
+  paymentModal.style.display = "block"; // Abre o modal de pagamento
 });
 
-// Eventos para fechar os modais
-span.onclick = function () {
-  modal.style.display = "none";
+// Funções para fechar os modais
+span.onclick = () => { modal.style.display = "none"; };
+closePaymentModal.onclick = () => { paymentModal.style.display = "none"; };
+window.onclick = (event) => {
+  if (event.target === modal) modal.style.display = "none";
+  if (event.target === paymentModal) paymentModal.style.display = "none";
 };
 
-closePaymentModal.onclick = function () {
-  paymentModal.style.display = "none";
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-  if (event.target == paymentModal) {
-    paymentModal.style.display = "none";
-  }
-};
-
-// Função para copiar o código PIX
-document.getElementById("copy-pix").addEventListener("click", function () {
+// Função para copiar o código PIX para a área de transferência
+document.getElementById("copy-pix").addEventListener("click", () => {
   navigator.clipboard.writeText(currentPixCode).then(() => {
     alert("Código PIX copiado para a área de transferência!");
   });
 });
 
-// Função para enviar mensagem pelo WhatsApp
-document
-  .getElementById("whatsapp-button")
-  .addEventListener("click", function () {
-    const productName =
-      document.getElementById("modal-product-name").textContent;
-    const price = document.getElementById("modal-product-price").textContent;
+// Função para enviar comprovante via WhatsApp
+document.getElementById("whatsapp-button").addEventListener("click", () => {
+  const productName = document.getElementById("modal-product-name").textContent;
+  const price = document.getElementById("modal-product-price").textContent;
 
-    const timestamp = Date.now(); // Obtém o timestamp atual em milissegundos
-    const numberAleatory = Math.floor(Math.random() * 1000); // Gera um número aleatório entre 0 e 999
-    const identification = timestamp + numberAleatory; // Combina o timestamp com o número aleatório
+  const timestamp = Date.now(); // Gera um timestamp único
+  const randomNum = Math.floor(Math.random() * 1000); // Número aleatório
+  const identification = timestamp + randomNum; // ID único para referência
 
-    const message = `Olá Gabriel, fiz o pagamento e estou enviando o comprovante do produto abaixo:
+  const message = `Olá Gabriel, fiz o pagamento e estou enviando o comprovante do produto abaixo:
     
 *Nome:* ${productName}
 *Preço:* R$ ${price}
 *Código de Identificação:* ${identification}
 
-Estou aguardando os dados para o meu acesso.
-    `;
-    const numberWhatsApp = "31983272409";
-    const whatsappUrl = `https://wa.me/55${numberWhatsApp}?text=${encodeURIComponent(
-      message
-    )}`;
+Estou aguardando os dados para o meu acesso.`;
 
-    window.open(whatsappUrl, "_blank");
+  const whatsappUrl = `https://wa.me/5531983272409?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, "_blank");
 
-    setTimeout(() => {
-      window.location.reload();
-    }, 3000);
-  });
+  setTimeout(() => {
+    window.location.reload(); // Recarrega a página após 3 segundos
+  }, 3000);
+});
+
+// Função para lidar com o clique no botão do produto
+function handleButtonClick(productId) {
+  const product = products.find((p) => p.id === productId);
+  if (product.href) {
+    window.open(product.href, "_blank"); // Abre o link do produto em uma nova aba
+  } else {
+    openModal(productId); // Abre o modal de produto
+  }
+}

@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --primary-color: #07021e;
+    --white: #fafafa;
+    --black: #181818;
+    --gray: #282727;
+  }
+  
+  body {
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+      Roboto, Arial, sans-serif;
+    background-color: var(--black);
+    padding: 10px;
+
+  }
+  
+  .header {
+    background-color: var(--black);
+    padding: 10px 0;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
+  
+  .logo {
+    line-height: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .description{
+    color: var(--white);
+  }
+    
+  .container {
+   max-width: 1140px;
+    margin: 20px auto;
+    padding: 0 10px;
+    min-height: calc(100vh - 16vh);
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  
+  .product {
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  .border-animate {
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .border-animate:hover {
+    background-color: gray;
+    padding: 4px;
+  }
+
+  
+  .product:hover {
+    box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .product h1 {
+    width: 100%;
+    height: 218px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.5) url("https://img.freepik.com/fotos-gratis/fundo-de-papel-de-parede-colorido-embacado-artistico_58702-8463.jpg?semt=ais_hybrid-rr-similar") no-repeat center;
+    background-size: cover;
+    border-radius: 4px;
+    backdrop-filter: blur(10px); /* Ajuste o valor do blur */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+    color: rgba(251, 251, 251, 0.948);
+    text-shadow: rgba(0, 0, 0, 0.55) 0px 6px 24px 0px;
+}
+  
+  .product h2 {
+    font-size: 18px;
+    height: 40px;
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  
+  .product p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 8px 0;
+    color: #333;
+  }
+
+
+  
+  button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: var(--gray);
+  }
+  
+  
+  
+
+  footer {
+    width: 100%;
+    height: 24px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+
+  @media (max-width: 400px) {
+    .products {
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 10px;
+    }
+
+    .product h1{
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    .product h2 {
+      width: 100%;
+      height: 60px;
+    }
+
+ 
+  }

@@ -113,6 +113,12 @@ const products = [
         button: "Acessar",
         href: `https://drive.google.com/file/d/10YfAge1AeCPbGEG5GTQJ0-06Kfs0LVGn/edit`,
     },
+    {
+        id: 20,
+        name: "Pacote de Planilhas",
+        button: "Acessar",
+        href: `https://drive.google.com/file/d/11bFMgy3cCDqACU_zsAbxozyojLK6arEc/view`,
+    },
 
 ]
 

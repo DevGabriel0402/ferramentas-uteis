@@ -26,3 +26,10 @@
     font-size: 18px;
   }
 }
+
+@media (max-width: 310px) {
+.header-content{
+  flex-direction: column;
+  gap: 10px
+}
+}
