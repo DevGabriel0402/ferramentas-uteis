@@ -6,17 +6,28 @@ document.getElementById(`playButton`).addEventListener(`click`, () => {
     const videoName = `A Forja - O poder da transformação`
     const videoDescription = document.getElementById(`videoDescription`)
     const doarButton = document.getElementById(`doarButton`)
+    const playIcon = document.getElementById(`playIcon`)
+    const thumb = document.getElementById(`thumb`)
 
     video.src = videoURL
     video.title = videoName
-    videoFrame.classList.remove(`hidden`)
-    setTimeout(() => {
-        videoDescription.classList.remove(`hidden`)
-    }, 4000)
-
+    thumb.classList.remove(`hidden`)
+    playIcon.classList.remove(`hidden`)
     setTimeout(() => {
         doarButton.classList.remove(`hidden`)
+        videoDescription.classList.remove(`hidden`)
+        videoFrame.classList.remove(`hidden`)
     }, 2000)
+
+
+
+    video.addEventListener(`load`, () => {
+
+        playIcon.classList.add(`hidden`)
+        thumb.classList.add(`hidden`)
+
+    })
+
 })
 
 

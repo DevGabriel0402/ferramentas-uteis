@@ -22,7 +22,7 @@ body{
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .container{
@@ -40,11 +40,66 @@ button{
 }
 
 #videoFrame{
+    position: relative;
     margin-top: 20px;
     padding: 20px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     
+}
+
+.thumb{
+    width: 920px;
+    height: 500px;
+    max-width: 100%;
+    max-height: 100%;
+    background: url(https://ingresso-a.akamaihd.net/prd/img/movie/a-forja-o-poder-da-transformacao/66030644-61fd-4939-83a1-04e0115ffe19.webp) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.play-icon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background-color: #e41010;
+    padding: 25px;
+    padding-left: 30px;
+    border-radius: 120%;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 1px 3px 0px, rgba(27, 31, 35, 0.20) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+
+.play-icon svg path{
+    fill: var(--white);
+}
+
+.titleVideo{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 99;
+    color: var(--white);
+    display: none;
+    opacity: 0;
+
+
+}
+
+#videoFrame:hover .titleVideo{
+    display: block;
+    opacity: 1;
+    animation: inRight .3s forwards;
+
+
 }
 
 #videoDescription{
@@ -53,15 +108,11 @@ button{
     opacity: 0;
     text-align: center;
     animation: inUp .8s forwards;
-    padding: 20px;
 
     span{
         font-weight: 600;
     }
 }
-
-
-
 
 #doarButton{
     background-color: rgb(36, 228, 78);
@@ -69,8 +120,6 @@ button{
     animation: inRight .5s forwards;
 
 }
-
-
 
 @keyframes inUp {
     0%{
@@ -93,4 +142,22 @@ button{
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@media (max-width: 475px) {
+    .titleVideo{
+        width: 200px;
+        font-size: 16px !important;
+        right: 40px;
+        text-align: end;
+    }  
+}
+
+@media (min-width: 476px) and (max-width: 635px) {
+    .titleVideo{
+        width: 400px;
+        right: 40px;
+        text-align: end;
+    
+    }  
 }
