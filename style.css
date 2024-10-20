@@ -271,18 +271,7 @@ button:hover {
   gap: 30px;
 }
 
-.contador{
-  margin-bottom: 10px;
-  padding: 5px;
-  background-color: var(--white);
-  color: var(--black);
-  border-radius: 5px;
-  width: fit-content;
 
-  span{
-    font-weight: 600;
-  }
-}
 
 footer {
   width: 100%;

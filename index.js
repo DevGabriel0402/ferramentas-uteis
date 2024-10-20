@@ -1,12 +1,3 @@
-// Contador de visitantes
-
-fetch('./Contador/contador.php')
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById('visitCount').textContent = data.visitas;
-  })
-  .catch((error) => console.error('Erro ao obter contagem de visitas:', error));
-
 
 // Dados dos produtos
 const products = [
