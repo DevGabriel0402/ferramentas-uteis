@@ -82,6 +82,18 @@ button{
     fill: var(--white);
 }
 
+.privacy{
+    position: absolute;
+    z-index: 99;
+    width: 150px;
+    height: 60px;
+
+    max-width: 100%;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+}
+
 .titleVideo{
     position: absolute;
     top: 30px;
