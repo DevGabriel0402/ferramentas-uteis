@@ -1,14 +1,23 @@
 const swiper = new Swiper('.mySwiper', {
-    loop: true, // Ativa o loop infinito
-    loopAdditionalSlides: 1, // Mantém os slides duplicados para transição suave
-    speed: 1000, // Velocidade da transição (1 segundo)
-    autoplay: {
-        delay: 0, // Sem atraso entre os slides
-        disableOnInteraction: false,
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
     },
-    slidesPerView: 4, // Quantidade de slides visíveis ao mesmo tempo
-    spaceBetween: 10, // Espaço entre os slides
-    freeMode: true, // Permite rolagem contínua sem travas
-    freeModeMomentum: false, // Remove inércia para fluxo constante
+    // pagination: {
+    //   el: ".swiper-pagination",
+    // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      mousewheel: true,
+      keyboard: true,
 
 });
