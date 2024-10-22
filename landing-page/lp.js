@@ -5,23 +5,21 @@ const swiper = new Swiper('.mySwiper', {
     slidesPerView: "auto",
     allowTouchMove: true,
     coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
     },
     // pagination: {
     //   el: ".swiper-pagination",
     // },
-      navigation: {
+    navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-      mousewheel: true,
-      keyboard: true,
-      freeMode: true
+    },
+    mousewheel: true,
+    keyboard: true,
 
 });
 
-swiper.on('touchStart', () => console.log('Touch started!'));
