@@ -2,11 +2,13 @@
 
 
 
+
     .hero {
         flex-direction: column-reverse;
         gap: 30px;
         height: fit-content;
-        padding: 32px;
+        padding-inline: 24px;
+        padding-block: 60px;
 
 
 
@@ -58,6 +60,10 @@
         background: linear-gradient(90deg, transparent 0%, var(--primary-color) 25%, var(--primary-color) 50%, var(--primary-color) 75%, transparent 100%);
     }
 
+    .section-why {
+        padding-inline: 24px;
+    }
+
     .section-why h1 {
         font-size: 24px;
         text-align: center;
@@ -68,6 +74,18 @@
 
         .card {
             width: 100%;
+        }
+    }
+
+    .section-price {
+        padding-inline: 24px;
+    }
+
+    .prices {
+        flex-direction: column !important;
+
+        .card {
+            width: 100% !important;
         }
     }
 }
