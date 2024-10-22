@@ -1,8 +1,4 @@
 @media (max-width: 650px) {
-
-
-
-
     .hero {
         flex-direction: column-reverse;
         gap: 30px;
@@ -22,7 +18,7 @@
                 font-size: 18px;
 
                 span {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
             }
 
@@ -37,7 +33,7 @@
             }
 
             span {
-                font-size: 30px;
+                font-size: 28px;
             }
 
             button {
@@ -87,5 +83,9 @@
         .card {
             width: 100% !important;
         }
+    }
+
+    .garantia img {
+        width: 75%;
     }
 }
