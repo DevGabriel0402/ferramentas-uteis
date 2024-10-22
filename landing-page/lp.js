@@ -1,5 +1,6 @@
 const swiper = new Swiper('.mySwiper', {
     effect: "coverflow",
+
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
