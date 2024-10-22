@@ -6,13 +6,14 @@
         padding-inline: 24px;
         padding-block: 60px;
 
-
-
-
+        .image-hero {
+            display: none;
+        }
         .text-hero {
             width: 100%;
             font-size: 22px;
             line-height: normal;
+            padding-top: 60px;
 
             .logo {
                 font-size: 18px;
@@ -87,5 +88,9 @@
 
     .garantia img {
         width: 75%;
+    }
+
+    footer{
+        font-size: 12px;
     }
 }

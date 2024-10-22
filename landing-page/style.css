@@ -88,16 +88,12 @@ body {
         justify-content: center;
 
         .image {
-            width: 300px;
-            height: 300px;
-            background-color: var(--font-color);
-            color: var(--black);
-            text-transform: uppercase;
-            display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 20px;
-            opacity: .5;
+
+            img {
+                width: 650px;
+            }
         }
     }
 }
@@ -130,18 +126,6 @@ body {
     align-items: center;
     background-color: var(--primary-color);
     overflow-x: hidden;
-}
-
-.text-wrapper::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 999;
-    background: linear-gradient(90deg, #131313, transparent 15%, transparent 85%, #131313 100%);
-    /*mude os #000000 para a mesma cor do fundo da seção*/
-    pointer-events: none;
 }
 
 .text-wrapper p {
