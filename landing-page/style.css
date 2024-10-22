@@ -406,6 +406,15 @@ body {
 }
 
 
+.pagamentos{
+    width: 100%;
+    padding-top: 20px;
+
+    img{
+        width: 54px;
+    }
+}
+
 .valores {
     margin-top: 20px;
     display: flex;
