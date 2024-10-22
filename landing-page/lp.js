@@ -22,6 +22,18 @@ const swiper = new Swiper('.mySwiper', {
 
 });
 
+document.getElementById('basicBtn').addEventListener('click', () => {
+  window.open('https://pay.kiwify.com.br/aIB3jEQ', '_blank')
+})
+
+document.getElementById('premiumBtn').addEventListener('click', () => {
+  window.open('https://pay.kiwify.com.br/NnBtroN', '_blank')
+})
+
+document.getElementById('plusBtn').addEventListener('click', () => {
+  window.open('https://pay.kiwify.com.br/9x3SQIB', '_blank')
+})
+
 
 const depoimentos = [
     {
