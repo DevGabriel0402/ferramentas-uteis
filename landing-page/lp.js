@@ -20,6 +20,8 @@ const swiper = new Swiper('.mySwiper', {
       },
       mousewheel: true,
       keyboard: true,
-      freeMode: false,
+      freeMode: true
 
 });
+
+swiper.on('touchStart', () => console.log('Touch started!'));
