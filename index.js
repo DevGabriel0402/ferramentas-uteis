@@ -113,18 +113,6 @@ const products = [
   },
   {
     id: 11,
-    name: "Canva Pro Teste",
-    price: 0,
-    description:
-      "Clique em acessar para acessar uma turma de teste com tudo do canva pro liberado. Lembrando essa e uma turma de teste",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJjW7pHbZAIeGR54U3K4OCy8B83Vg1204EUw&s",
-    budge: "Teste",
-    button: "Acessar",
-    href: `https://www.canva.com/brand/join?token=X4CAsfBfLb-aIUbV1o_34Q&brandingVariant=edu&invitationDestinationType=group`,
-  },
-  {
-    id: 12,
     name: "Pack para Designer PRO",
     price: 9.9,
     description:
@@ -136,7 +124,7 @@ const products = [
     href: `./pack-de-designer/index.html`,
   },
   {
-    id: 13,
+    id: 12,
     name: "A Forja - O poder da ...",
     price: 0,
     description:
@@ -146,18 +134,6 @@ const products = [
     budge: "Filme",
     button: "Acessar",
     href: `./A-Forja-O-Poder-da-transformacao/index.html`,
-  },
-  {
-    id: 14,
-    name: "Pack para Designer",
-    price: 0,
-    description:
-      "Acesse o PACK GRATUÍTO para desigenr.",
-    image:
-      "https://nathaliaribeiro.com.br/wp-content/uploads/2020/11/anuncio-pack-psd.png",
-    budge: "Pack",
-    button: "Acessar",
-    href: `./pack-gratuito-de-designer`,
   },
 ];
 
