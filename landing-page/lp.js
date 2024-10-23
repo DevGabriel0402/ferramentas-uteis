@@ -22,7 +22,7 @@ const swiper = new Swiper('.mySwiper', {
 
 });
 
-document.getElementById('buttonCta').addEventListener('click', () => {
+document.getElementById('buttonHero').addEventListener('click', () => {
   document.getElementById('section-price').scrollIntoView({behavior: 'smooth'})
 })
 
