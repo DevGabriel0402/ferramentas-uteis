@@ -22,6 +22,10 @@ const swiper = new Swiper('.mySwiper', {
 
 });
 
+document.getElementById('buttonCta').addEventListener('click', () => {
+  document.getElementById('section-price').scrollIntoView({behavior: 'smooth'})
+})
+
 document.getElementById('basicBtn').addEventListener('click', () => {
   window.open('https://pay.kiwify.com.br/aIB3jEQ', '_blank')
 })
